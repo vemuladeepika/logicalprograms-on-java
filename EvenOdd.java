@@ -1,31 +1,19 @@
-import java.util.Scanner;
+import java.util.Scanner;//5.write a java program to check whether a number is even or odd.
 class EvenOdd
 {
     public static void main(String args[])
     {
-        int n,even=0,odd=0;
-        Scanner s=new Scanner(System.in);
-        System.out.print("enter the number of elements in array:");
-        n=s.nextInt();
-        int[]a=new int[n];
-        System.out.println("enter the elements of the array:");
-        for(int i=0;i<n;i++)
+        int num;
+        System.out.println("Enter an integer number:");
+        Scanner sc=new Scanner(System.in);
+        num=sc.nextInt();
+        if(num%2==0)
         {
-            a[i]=s.nextInt();
+            System.out.println("Entered number is even");
         }
-        for(int i=0;i<n;i++)
+        else
         {
-            if(a[i]%2==0)
-            {
-                even=even+a[i];
-            }
-            else
-            {
-                odd=odd+a[i];
-            }
+            System.out.println("Entered number is odd");
         }
-         System.out.println("sum of even numbers:"+even); 
-         System.out.println("sum of odd numbers:"+odd);
-         
     }
 }
